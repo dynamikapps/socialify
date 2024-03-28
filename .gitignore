@@ -1,0 +1,29 @@
+# System/Hidden Files
+.*
+
+# pipenv
+Pipfile
+Pipfile.lock
+
+# Editor
+*.iml
+
+# Python
+*.py[cod]
+**/__pycache__
+*.pyc
+
+# Test db
+db.sqlite3
+*.sqlite3
+
+# Static files
+staticfiles
+
+# Environment variables
+local.env
+.env
+
+# Misc
+.DS_Store
+output.txt.env
