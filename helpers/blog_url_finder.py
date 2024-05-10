@@ -95,7 +95,7 @@ class BlogUrlFinder:
     
 if __name__ == "__main__":
     # Example Usage:
-    base_url = "https://www.floridahipster.com"  # Replace with the actual website URL
+    base_url = "https://www.dynamikapps.com"  # Replace with the actual website URL to test
     finder = BlogUrlFinder(base_url)
     sitemap_url = finder.find_sitemap_url()
     if sitemap_url:

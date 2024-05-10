@@ -23,7 +23,7 @@ class SocialMediaCaptionToolClaude:
     def generate_summary(self, article_text):
         try:
             response = self.client.messages.create(
-                model="claude-3-sonnet-20240229",
+                model=os.getenv('ANTHROPIC_MODEL_NAME'),
                 temperature=0,
                 max_tokens=1024,
                 system="You are a sophisticated summarizing assistant with a sharp eye for detail and a knack for distilling complex information into its essence.",

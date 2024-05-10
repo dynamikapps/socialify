@@ -1,4 +1,6 @@
-beautifulsoup4==4.12.2 
+anthropic==0.21.3
+beautifulsoup4==4.12.2
+groq==0.4.2
 newspaper3k==0.2.8
 openai==1.6.1
 pandas==1.5.3

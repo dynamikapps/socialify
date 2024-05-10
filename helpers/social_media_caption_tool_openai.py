@@ -23,7 +23,7 @@ class SocialMediaCaptionToolOpenAI:
     def generate_summary(self, article_text):
         try:
             response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo-0125",
+                model=os.getenv('OPENAI_MODEL_NAME'),
                 temperature=0,
                 max_tokens=1024,
                 messages=[

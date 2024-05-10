@@ -23,7 +23,7 @@ class SocialMediaCaptionToolGroq:
     def generate_summary(self, article_text):
         try:
             response = self.client.chat.completions.create(
-                model="mixtral-8x7b-32768",
+                model=os.getenv('GROQ_MODEL_NAME'),
                 temperature=0,
                 max_tokens=1024,
                 messages=[
