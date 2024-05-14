@@ -3,9 +3,9 @@ import pandas as pd
 from dotenv import load_dotenv
 import streamlit as st
 from helpers.blog_url_finder import BlogUrlFinder
-from helpers.social_media_caption_tool_claude import SocialMediaCaptionToolClaude as SocialMediaCaptionTool
+# from helpers.social_media_caption_tool_claude import SocialMediaCaptionToolClaude as SocialMediaCaptionTool
 # from helpers.social_media_caption_tool_groq import SocialMediaCaptionToolGroq as SocialMediaCaptionTool
-# from helpers.social_media_caption_tool_openai import SocialMediaCaptionToolOpenAI as SocialMediaCaptionTool
+from helpers.social_media_caption_tool_openai import SocialMediaCaptionToolOpenAI as SocialMediaCaptionTool
 
 
 load_dotenv()
@@ -50,7 +50,7 @@ def generate_captions(selected_links, selected_platforms, target_audience, inclu
             platform_df.dropna(how='any', inplace=True)
             # Replace spaces with underscores and convert to lowercase
             platform_name = platform.replace(" ", "_").lower()
-            output_csv_path = f"output_{platform_name}_{timestamp}.csv"
+            output_csv_path = f"output/output_{platform_name}_{timestamp}.csv"
             platform_df.to_csv(output_csv_path, index=False)
             output_csv_paths.append(output_csv_path)
         print(f"Output written to: {', '.join(output_csv_paths)}")
@@ -60,7 +60,7 @@ def generate_captions(selected_links, selected_platforms, target_audience, inclu
         for platform in selected_platforms:
             if platform not in dataframe.columns:
                 dataframe[platform] = ""
-        output_csv_path = f"output_{timestamp}.csv"
+        output_csv_path = f"output/output_{timestamp}.csv"
         dataframe.to_csv(output_csv_path, index=False)
         print(f"Output written to {output_csv_path}")
         return output_csv_path  # Optionally return the path of the generated CSV file
