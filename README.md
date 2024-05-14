@@ -72,3 +72,7 @@ This project is licensed under the terms of the MIT license.
 
 ## Contact
 For any inquiries or feedback, please contact handy@dynamikapps.com
+
+## Video Explainer
+
+For a detailed walkthrough of the application, check out our [YouTube Video Explainer](https://youtu.be/W8yoKxtnhqw).
